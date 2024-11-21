@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/backgroundImage"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        android:src="@drawable/imagem_login"
+        app:srcCompat="@drawable/imagem_login" />
+
+    <TextView
+        android:id="@+id/titleText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="40dp"
+        android:text="Gestão de\nFazenda"
+        android:textColor="#000000"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:gravity="center" />
+
+    <LinearLayout
+        android:id="@+id/formLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_centerInParent="true"
+        android:layout_marginStart="40dp"
+        android:layout_marginEnd="40dp"
+        android:background="#80FFFFFF"
+        android:padding="16dp">
+
+        <!-- Nome -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Nome:"
+            android:textColor="#000000" />
+
+        <EditText
+            android:id="@+id/nameEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#FFFFFF"
+            android:inputType="textPersonName"
+            android:importantForAccessibility="yes"
+            android:hint="Digite seu nome"
+            android:minHeight="48dp"
+            android:paddingTop="16dp"
+            android:paddingBottom="16dp" />
+
+        <!-- E-mail -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="E-mail:"
+            android:textColor="#000000"
+            android:layout_marginTop="8dp" />
+
+        <EditText
+            android:id="@+id/emailEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#FFFFFF"
+            android:inputType="textEmailAddress"
+            android:importantForAccessibility="yes"
+            android:hint="Digite seu e-mail"
+            android:minHeight="48dp"
+            android:paddingTop="16dp"
+            android:paddingBottom="16dp" />
+
+        <!-- Nota do Produtor -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Nota Produtor:"
+            android:textColor="#000000"
+            android:layout_marginTop="8dp" />
+
+        <EditText
+            android:id="@+id/notaProdutorEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#FFFFFF"
+            android:inputType="numberDecimal"
+            android:importantForAccessibility="yes"
+            android:hint="Digite a nota do produtor"
+            android:minHeight="48dp"
+            android:paddingTop="16dp"
+            android:paddingBottom="16dp" />
+
+        <!-- Data Nascimento -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Data nascimento:"
+            android:textColor="#000000"
+            android:layout_marginTop="8dp" />
+
+        <EditText
+            android:id="@+id/dataNascimentoEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#FFFFFF"
+            android:inputType="date"
+            android:importantForAccessibility="yes"
+            android:hint="Escolha a data de nascimento"
+            android:minHeight="48dp"
+            android:paddingTop="16dp"
+            android:paddingBottom="16dp"
+            android:focusable="false"
+            android:clickable="true"/>
+
+        <!-- Senha -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Senha:"
+            android:textColor="#000000"
+            android:layout_marginTop="8dp" />
+
+        <EditText
+            android:id="@+id/passwordEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#FFFFFF"
+            android:inputType="textPassword"
+            android:importantForAccessibility="yes"
+            android:hint="Digite sua senha"
+            android:minHeight="48dp"
+            android:paddingTop="16dp"
+            android:paddingBottom="16dp" />
+
+        <!-- Botão de Cadastro -->
+        <Button
+            android:id="@+id/cadastrarButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="16dp"
+            android:backgroundTint="#FFA500"
+            android:text="Cadastrar"
+            android:textColor="#FFFFFF"
+            android:minHeight="48dp"
+            android:minWidth="48dp"
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp" />
+    </LinearLayout>
+
+</RelativeLayout>

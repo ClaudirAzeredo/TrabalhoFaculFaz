@@ -1,0 +1,88 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center_horizontal">
+
+        <!-- Texto Tipo de Animal -->
+        <TextView
+            android:id="@+id/tipoAnimalTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Tipo de animal"
+            android:textSize="18sp"
+            android:layout_marginTop="16dp"/>
+
+        <!-- Spinner para Tipo de Animal -->
+        <Spinner
+            android:id="@+id/tipoAnimalSpinner"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/spinner_background"
+            android:layout_marginTop="8dp"/>
+
+        <!-- Imagem do Animal -->
+        <ImageView
+            android:id="@+id/animalImageView"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_marginTop="16dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/imagem_boi"
+            app:srcCompat="@drawable/imagem_boi" />
+
+        <!-- Botão Cadastrar Animal -->
+        <Button
+            android:id="@+id/cadastrarAnimalButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Cadastrar Animal"
+            android:backgroundTint="#FFB74D"
+            android:textColor="@android:color/white"
+            android:layout_marginTop="16dp"/>
+
+        <!-- Texto Tipo de Colheita -->
+        <TextView
+            android:id="@+id/tipoColheitaTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Tipo de colheita"
+            android:textSize="18sp"
+            android:layout_marginTop="32dp"/>
+
+        <!-- Spinner para Tipo de Colheita -->
+        <Spinner
+            android:id="@+id/tipoColheitaSpinner"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/spinner_background"
+            android:layout_marginTop="8dp"/>
+
+        <!-- Imagem da Colheita -->
+        <ImageView
+            android:id="@+id/colheitaImageView"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_marginTop="16dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/image_planta__o"
+            app:srcCompat="@drawable/image_planta__o" />
+
+        <!-- Botão Cadastrar Colheita -->
+        <Button
+            android:id="@+id/cadastrarColheitaButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Cadastrar Colheita"
+            android:backgroundTint="#FFB74D"
+            android:textColor="@android:color/white"
+            android:layout_marginTop="16dp"/>
+
+    </LinearLayout>
+</ScrollView>

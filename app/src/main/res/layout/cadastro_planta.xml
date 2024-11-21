@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    android:orientation="vertical">
+
+    <!-- Toolbar personalizada -->
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#6200EE"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        android:elevation="4dp"
+        app:title="Cadastro de Colheitas"
+        app:titleTextColor="#FFFFFF" />
+
+    <!-- ScrollView com o restante do layout -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <!-- Imagem principal -->
+            <ImageView
+                android:id="@+id/imagePlantacao"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:contentDescription="Imagem principal"
+                android:scaleType="centerCrop"
+                android:src="@drawable/soja"
+                app:srcCompat="@drawable/soja" />
+
+            <!-- Botões de seleção -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:layout_marginTop="16dp"
+                android:weightSum="4">
+
+                <!-- Botão 1 -->
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:gravity="center">
+
+                    <ImageView
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:contentDescription="Ícone tipo planta"
+                        android:src="@drawable/plantagrao"
+                        app:srcCompat="@drawable/plantagrao" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:text="Tipo da planta"
+                        android:textSize="14sp"
+                        android:textColor="#000000" />
+                </LinearLayout>
+
+                <!-- Botão 2 -->
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:gravity="center">
+
+                    <ImageView
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:contentDescription="Ícone calendário"
+                        android:src="@drawable/solar_calendar_linear"
+                        app:srcCompat="@drawable/solar_calendar_linear" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:text="dd/dd/dd"
+                        android:textSize="14sp"
+                        android:textColor="#000000" />
+                </LinearLayout>
+
+                <!-- Botão 3 -->
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:gravity="center">
+
+                    <ImageView
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:contentDescription="Ícone insumos"
+                        android:src="@drawable/quimica"
+                        app:srcCompat="@drawable/quimica" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:text="Insumos"
+                        android:textSize="14sp"
+                        android:textColor="#000000" />
+                </LinearLayout>
+
+                <!-- Botão 4 -->
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:gravity="center">
+
+                    <ImageView
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:contentDescription="Ícone área colhida"
+                        android:src="@drawable/trabalhador"
+                        app:srcCompat="@drawable/trabalhador" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:text="Área colhida"
+                        android:textSize="14sp"
+                        android:textColor="#000000" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <!-- Campos de cadastro -->
+            <EditText
+                android:id="@+id/etTipoColheita"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Tipo de Colheita"
+                android:layout_marginTop="16dp"
+                android:background="#E0E0E0"
+                android:padding="8dp" />
+
+            <EditText
+                android:id="@+id/etDataPlantio"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Data do Plantio"
+                android:layout_marginTop="8dp"
+                android:background="#E0E0E0"
+                android:inputType="date"
+                android:padding="8dp"
+                android:focusable="false"
+                android:clickable="true"/>
+
+            <EditText
+                android:id="@+id/etTipoInsumos"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Tipo de Insumos"
+                android:layout_marginTop="8dp"
+                android:background="#E0E0E0"
+                android:padding="8dp" />
+
+            <EditText
+                android:id="@+id/etDataProximoInsumo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Data do Próximo Insumo"
+                android:inputType="date"
+                android:layout_marginTop="8dp"
+                android:background="#E0E0E0"
+                android:padding="8dp"
+                android:focusable="false"
+                android:clickable="true"/>
+
+            <EditText
+                android:id="@+id/etQuantidadeAreaColhida"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Quantidade de Área Colhida"
+                android:layout_marginTop="8dp"
+                android:background="#E0E0E0"
+                android:padding="8dp" />
+
+            <!-- Botão de cadastro -->
+            <Button
+                android:id="@+id/btnAddPlantInfo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Cadastrar"
+                android:layout_marginTop="16dp"
+                android:layout_gravity="center"
+                android:background="#6200EE"
+                android:textColor="#FFFFFF" />
+
+            <!-- Lista de informações -->
+            <ListView
+                android:id="@+id/listViewPlantInfo"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:layout_marginTop="16dp"
+                android:background="#F8F8F8" />
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

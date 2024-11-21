@@ -1,0 +1,26 @@
+<resources>
+    <!-- Opções de tipos de animais -->
+    <string-array name="tipo_animais">
+        <item>Bovino</item>
+        <item>Suíno</item>
+        <item>Caprino</item>
+        <item>Outros</item>
+    </string-array>
+
+    <!-- Opções de tipos de colheitas -->
+    <string-array name="tipo_colheitas">
+        <item>Cana-de-açúcar</item>
+        <item>Soja</item>
+        <item>Milho</item>
+        <item>Outros</item>
+    </string-array>
+
+    <!-- Opções para Macho ou Fêmea -->
+    <string-array name="sexo_options">
+        <item>Masculino</item>
+        <item>Feminino</item>
+    </string-array>
+
+    <!-- Nome do aplicativo -->
+    <string name="app_name">Nome do Aplicativo</string>
+</resources>

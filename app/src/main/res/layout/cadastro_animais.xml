@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#FFFFFF">
+
+    <!-- Toolbar -->
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="#6200EE"
+        android:elevation="4dp"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+        app:title="Cadastro de Animais"
+        app:titleTextColor="#FFFFFF" />
+
+    <!-- ScrollView para o conteúdo -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <!-- Imagem principal -->
+            <ImageView
+                android:id="@+id/imageCattle"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:src="@drawable/fazenda_plus"
+                android:scaleType="centerCrop"
+                android:contentDescription="Imagem de bovinos" />
+
+            <!-- Botões de seleção -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:layout_marginTop="16dp"
+                android:weightSum="4">
+
+                <!-- Ícones e textos -->
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:gravity="center">
+
+                    <ImageView
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:src="@drawable/icone_boi"
+                        android:contentDescription="Ícone de macho/fêmea" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:text="Macho/Fêmea"
+                        android:textSize="14sp"
+                        android:textColor="#000000" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:gravity="center">
+
+                    <ImageView
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:src="@drawable/solar_calendar_linear"
+                        android:contentDescription="Ícone de calendário" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:text="dd/dd/dd"
+                        android:textSize="14sp"
+                        android:textColor="#000000" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:gravity="center">
+
+                    <ImageView
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:src="@drawable/game_icons_weight"
+                        android:contentDescription="Ícone de peso" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:text="Peso"
+                        android:textSize="14sp"
+                        android:textColor="#000000" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:gravity="center">
+
+                    <ImageView
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:src="@drawable/icone_boi"
+                        android:contentDescription="Ícone de registro" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:text="N° Registro"
+                        android:textSize="14sp"
+                        android:textColor="#000000" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <!-- Spinner para escolher entre Macho/Fêmea -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="16dp"
+                android:gravity="center">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:text="Escolha o Sexo"
+                    android:textColor="#000000"
+                    android:textSize="14sp" />
+
+                <Spinner
+                    android:id="@+id/spinnerSexo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:entries="@array/sexo_options"/>
+
+            </LinearLayout>
+
+            <!-- Inputs para preenchimento -->
+            <EditText
+                android:id="@+id/etMachoDataVacina"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Data da Primeira Vacina"
+                android:inputType="date"
+                android:layout_marginTop="16dp"
+                android:background="#E0E0E0"
+                android:padding="8dp"
+                android:focusable="false"
+                android:clickable="true"/>
+
+            <EditText
+                android:id="@+id/etMachoProximaVacina"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Data da Próxima Vacina"
+                android:inputType="date"
+                android:layout_marginTop="8dp"
+                android:background="#E0E0E0"
+                android:padding="8dp"
+                android:focusable="false"
+                android:clickable="true"/>
+
+            <EditText
+                android:id="@+id/etMachoPeso"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Peso"
+                android:layout_marginTop="8dp"
+                android:background="#E0E0E0"
+                android:padding="8dp" />
+
+            <EditText
+                android:id="@+id/etMachoRegistro"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Número de Registro"
+                android:layout_marginTop="8dp"
+                android:background="#E0E0E0"
+                android:padding="8dp" />
+
+            <!-- Botão Cadastrar -->
+            <Button
+                android:id="@+id/btnRegister"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Cadastrar"
+                android:layout_marginTop="16dp"
+                android:background="#000000"
+                android:textColor="#FFFFFF"
+                android:layout_gravity="center" />
+
+            <!-- Texto para exibir informações cadastradas -->
+            <TextView
+                android:id="@+id/tvCadastroInfo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Nenhum animal cadastrado"
+                android:textSize="14sp"
+                android:layout_marginTop="16dp"
+                android:background="#F0F0F0"
+                android:padding="8dp"
+                android:textColor="#000000" />
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>
