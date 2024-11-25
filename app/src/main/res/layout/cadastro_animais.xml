@@ -137,21 +137,22 @@
                 </LinearLayout>
             </LinearLayout>
 
-            <!-- Spinner para escolher entre Macho/Fêmea -->
+            <EditText
+                android:id="@+id/etTipoAnimal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Tipo de Animal"
+                android:layout_marginTop="16dp"
+                android:background="#E0E0E0"
+                android:padding="8dp" />
+
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
                 android:layout_marginTop="16dp"
                 android:gravity="center">
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="4dp"
-                    android:text="Escolha o Sexo"
-                    android:textColor="#000000"
-                    android:textSize="14sp" />
 
                 <Spinner
                     android:id="@+id/spinnerSexo"
@@ -161,7 +162,6 @@
 
             </LinearLayout>
 
-            <!-- Inputs para preenchimento -->
             <EditText
                 android:id="@+id/etMachoDataVacina"
                 android:layout_width="match_parent"
