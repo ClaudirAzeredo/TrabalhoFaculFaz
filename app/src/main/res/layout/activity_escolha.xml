@@ -10,7 +10,6 @@
         android:orientation="vertical"
         android:gravity="center_horizontal">
 
-        <!-- Texto Tipo de Animal -->
         <TextView
             android:id="@+id/tipoAnimalTextView"
             android:layout_width="wrap_content"
@@ -19,7 +18,6 @@
             android:textSize="18sp"
             android:layout_marginTop="16dp"/>
 
-        <!-- Spinner para Tipo de Animal -->
         <Spinner
             android:id="@+id/tipoAnimalSpinner"
             android:layout_width="wrap_content"
@@ -27,7 +25,6 @@
             android:background="@drawable/spinner_background"
             android:layout_marginTop="8dp"/>
 
-        <!-- Imagem do Animal -->
         <ImageView
             android:id="@+id/animalImageView"
             android:layout_width="match_parent"
@@ -37,7 +34,6 @@
             android:src="@drawable/imagem_boi"
             app:srcCompat="@drawable/imagem_boi" />
 
-        <!-- Botão Cadastrar Animal -->
         <Button
             android:id="@+id/cadastrarAnimalButton"
             android:layout_width="wrap_content"
@@ -47,7 +43,6 @@
             android:textColor="@android:color/white"
             android:layout_marginTop="16dp"/>
 
-        <!-- Texto Tipo de Colheita -->
         <TextView
             android:id="@+id/tipoColheitaTextView"
             android:layout_width="wrap_content"
@@ -56,7 +51,6 @@
             android:textSize="18sp"
             android:layout_marginTop="32dp"/>
 
-        <!-- Spinner para Tipo de Colheita -->
         <Spinner
             android:id="@+id/tipoColheitaSpinner"
             android:layout_width="wrap_content"
@@ -64,7 +58,6 @@
             android:background="@drawable/spinner_background"
             android:layout_marginTop="8dp"/>
 
-        <!-- Imagem da Colheita -->
         <ImageView
             android:id="@+id/colheitaImageView"
             android:layout_width="match_parent"
@@ -74,7 +67,6 @@
             android:src="@drawable/image_planta__o"
             app:srcCompat="@drawable/image_planta__o" />
 
-        <!-- Botão Cadastrar Colheita -->
         <Button
             android:id="@+id/cadastrarColheitaButton"
             android:layout_width="wrap_content"
