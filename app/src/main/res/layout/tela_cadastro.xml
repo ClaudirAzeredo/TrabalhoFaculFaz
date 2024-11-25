@@ -35,7 +35,6 @@
         android:background="#80FFFFFF"
         android:padding="16dp">
 
-        <!-- Nome -->
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -54,7 +53,6 @@
             android:paddingTop="16dp"
             android:paddingBottom="16dp" />
 
-        <!-- E-mail -->
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -74,7 +72,6 @@
             android:paddingTop="16dp"
             android:paddingBottom="16dp" />
 
-        <!-- Nota do Produtor -->
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -94,7 +91,6 @@
             android:paddingTop="16dp"
             android:paddingBottom="16dp" />
 
-        <!-- Data Nascimento -->
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -116,7 +112,6 @@
             android:focusable="false"
             android:clickable="true"/>
 
-        <!-- Senha -->
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -136,7 +131,6 @@
             android:paddingTop="16dp"
             android:paddingBottom="16dp" />
 
-        <!-- Botão de Cadastro -->
         <Button
             android:id="@+id/cadastrarButton"
             android:layout_width="wrap_content"
