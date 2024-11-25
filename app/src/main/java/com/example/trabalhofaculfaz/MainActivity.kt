@@ -41,23 +41,19 @@ class MainActivity : AppCompatActivity() {
         val emailRecebido = intent.getStringExtra("email") ?: ""
         val senhaRecebida = intent.getStringExtra("senha") ?: ""
 
-        // Preencher os campos com os dados recebidos (se existirem)
         if (nomeRecebido.isNotEmpty() && emailRecebido.isNotEmpty()) {
             edtNome.setText(nomeRecebido)
             edtEmail.setText(emailRecebido)
         }
 
-        // Verificar permissão de notificações quando o app iniciar
         checkNotificationPermission()
 
-        // Ação para o botão de cadastro
         btnCadastro.setOnClickListener {
 
             val intent = Intent(this, TelaCadastro::class.java)
                 startActivity(intent)
             }
 
-        // Ação para o botão de login
         btnLogin.setOnClickListener {
             val nome = edtNome.text.toString()
             val senha = edtSenha.text.toString()
@@ -66,8 +62,7 @@ class MainActivity : AppCompatActivity() {
                 Toast.makeText(this, "Preencha todos os campos", Toast.LENGTH_SHORT).show()
             } else {
                 showWelcomeNotification(nome)
-
-                // Navegar para a EscolhaActivity após login bem-sucedido
+                
                 val intent = Intent(this, EscolhaActivity::class.java)
                 startActivity(intent)
                 Toast.makeText(this, "Acesso realizado com sucesso!", Toast.LENGTH_SHORT).show()
@@ -91,9 +86,7 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
-    // Método para exibir a notificação de "Bem-vindo"
     private fun showWelcomeNotification(nome: String) {
-        // Criação do canal de notificação (necessário para Android 8.0 e superior)
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
             val channel = NotificationChannel(
                 CHANNEL_ID,
@@ -108,15 +101,13 @@ class MainActivity : AppCompatActivity() {
             notificationManager.createNotificationChannel(channel)
         }
 
-        // Criar a notificação
         val notification: Notification = NotificationCompat.Builder(this, CHANNEL_ID)
             .setContentTitle("Bem-vindo, $nome!")
             .setContentText("Obrigado por fazer login no aplicativo de Gestão de Fazenda!")
-            .setSmallIcon(R.drawable.ic_notification_background) // Defina um ícone de notificação
+            .setSmallIcon(R.drawable.ic_notification_background) 
             .setPriority(NotificationCompat.PRIORITY_DEFAULT)
             .build()
 
-        // Exibir a notificação
         val notificationManager: NotificationManager =
             getSystemService(NotificationManager::class.java)
         notificationManager.notify(0, notification)
