@@ -15,7 +15,6 @@
         android:theme="@style/Theme.TrabalhoFaculFaz"
         tools:targetApi="31">
 
-        <!-- Atividade principal (MainActivity) -->
         <activity
             android:name=".MainActivity"
             android:exported="true"
@@ -26,7 +25,6 @@
             </intent-filter>
         </activity>
 
-        <!-- Atividade TelaCadastro -->
         <activity
             android:name=".TelaCadastro"
             android:label="Tela de Cadastro"
@@ -34,15 +32,13 @@
             android:exported="true">
         </activity>
 
-        <!-- Atividade EscolhaActivity -->
         <activity
             android:name=".EscolhaActivity"
             android:label="Escolha de Animal e Colheita"
             android:theme="@style/Theme.TrabalhoFaculFaz"
             android:exported="true">
         </activity>
-
-        <!-- Atividade CadastroAnimais -->
+        
         <activity
             android:name=".CadastroAnimais"
             android:label="Cadastro de Animais"
@@ -50,7 +46,6 @@
             android:exported="true">
         </activity>
 
-        <!-- Atividade CadastroColheitas -->
         <activity
             android:name=".CadastroColheitas"
             android:label="Cadastro de Colheitas"
